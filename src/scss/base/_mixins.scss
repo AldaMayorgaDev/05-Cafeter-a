@@ -1,0 +1,23 @@
+// cuando en sass se repite mucho un codigo lo ideal es crear un mixin
+@use 'variables' as v;
+
+/* Mixins para @media-queries */
+
+@mixin mobile{
+    @media (min-width: v.$mobile) {
+        @content;
+    }   
+}
+
+@mixin tablet{
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+
