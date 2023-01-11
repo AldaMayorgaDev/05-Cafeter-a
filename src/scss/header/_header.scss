@@ -1,0 +1,7 @@
+// el guion bajo al inicio del nombre indica que ese archivo sera incluido en otro 
+
+/* Header */
+@use '../base/variables' as v;
+.header{
+    color : v.$negro;
+}

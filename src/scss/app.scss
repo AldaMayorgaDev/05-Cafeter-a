@@ -1,0 +1,15 @@
+// Crear Variables con SASS 
+// Sintaxis:
+//    $nombreVariable : valor;
+
+
+
+// Para importar / icluir otro archivo de sass se utiliza:
+// @import 'ruta del archivo'; ---> forma antigua
+// @use 'ruta del archivo'; ---->forma más nueva
+
+
+
+ 
+@use 'base'; //Busca un index.scss
+@use 'header';

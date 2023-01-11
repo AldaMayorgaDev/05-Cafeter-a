@@ -1,0 +1,10 @@
+// Este achivo incluye todos los archivos del directorio base/ y asi se evita importar muchos archivos en app.scss 
+
+// @forward ;  ---> Solo incluye los archivos
+
+// @use y @import ---> Incluyen y utilizan esos archivos
+
+@forward 'normalize';
+@forward 'variables';
+@forward 'globales';
+@forward 'utilidades';
