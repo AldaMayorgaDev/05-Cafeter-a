@@ -327,8 +327,8 @@ p {
   font-size: 2rem;
 }
 
-.contenedor {
-  width: 95%;
+[class$=__contenedor] {
+  width: 90%;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -364,15 +364,122 @@ h3 {
 }
 
 bg-primario {
-  background-color: #e8505b;
+  background-color: #5e311e;
 }
 
+/* Mixins para @media-queries */
 /* Header */
 .header {
-  color: #000000;
+  padding: 5rem 0;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .header {
+    min-height: 70rem;
+  }
+}
+@media (min-width: 480px) {
+  .header {
+    padding: 4rem 0;
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    padding: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    padding: 2rem 0;
+  }
+}
+.header::before {
+  content: "";
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+}
+.header:hover {
+  cursor: pointer;
+}
+.header .header__contenido {
+  position: relative;
+}
+.header .header__contenido .header__texto {
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .header .header__contenido .header__texto {
+    margin-top: 10rem;
+  }
 }
 
-/* Navegacion */
-.navegacion {
-  color: #000000;
+.inicio__header {
+  background-image: url(../img/header_inicio.jpg);
+}
+
+/**** Navegacion ****/
+.inicio__nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .inicio__nav {
+    flex-direction: row;
+    gap: 1.25rem;
+    margin-top: 0;
+  }
+}
+.inicio__nav a {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+.inicio__nav a:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0.7rem;
+  color: #c39c63;
+}
+.inicio__nav a.activo {
+  color: #c39c63;
+}
+@media (min-width: 768px) {
+  .inicio__nav a {
+    margin-bottom: 0;
+  }
+}
+
+.inicio__barra {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .inicio__barra {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.inicio__barra .inicio__logo {
+  width: 50%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .inicio__barra .inicio__logo {
+    width: 20rem;
+    margin: 0;
+  }
 }
