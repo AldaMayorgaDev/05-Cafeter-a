@@ -308,6 +308,7 @@ template {
   display: none;
 }
 
+/* Mixins para @media-queries */
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -320,11 +321,13 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
+  background-color: #ebe7de;
 }
 
 p {
   color: #000000;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  line-height: 2;
 }
 
 [class$=__contenedor] {
@@ -342,8 +345,19 @@ img {
   display: block;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Tipografia */
 h1, h2, h3 {
-  margin: 0 0 5rem 0;
+  font-family: "Raleway", sans-serif;
+  margin: 0 0 2rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5;
 }
 
 h1 {
@@ -352,6 +366,21 @@ h1 {
 
 h2 {
   font-size: 3.6rem;
+  color: #5e311e;
+}
+h2 span {
+  color: #c39c63;
+  font-size: 1.8rem;
+  display: block;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+  background-image: url(../img/cafe.svg);
+  background-size: 10rem;
 }
 
 h3 {
@@ -367,7 +396,6 @@ bg-primario {
   background-color: #5e311e;
 }
 
-/* Mixins para @media-queries */
 /* Header */
 .header {
   padding: 5rem 0;
@@ -482,4 +510,41 @@ bg-primario {
     width: 20rem;
     margin: 0;
   }
+}
+
+/* Contenido principal */
+.principal__contenido {
+  background-color: #ffffff;
+  padding: 5rem 2rem;
+  border-radius: 0.6rem;
+}
+@media (min-width: 768px) {
+  .principal__contenido {
+    padding: 10rem;
+    margin-top: -10rem;
+    position: relative;
+  }
+}
+
+/* Iconos */
+.principal__iconos {
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .principal__iconos .iconos__listado {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 2rem;
+       -moz-column-gap: 2rem;
+            column-gap: 2rem;
+  }
+}
+.principal__iconos .iconos__listado .icono__elemento img {
+  margin: 0 auto;
+  width: 12rem;
+}
+.principal__iconos .iconos__listado .icono__elemento .iconos__descripcion {
+  font-family: "Bona Nova", serif;
+  font-size: 3.2rem;
+  color: #5e311e;
 }

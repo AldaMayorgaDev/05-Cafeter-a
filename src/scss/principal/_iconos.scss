@@ -1,0 +1,25 @@
+/* Iconos */
+
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.principal__iconos{
+    margin-top: 5rem;
+
+    .iconos__listado{
+        @include m.tablet{ 
+            @include m.grid(3, 2rem);
+        }
+        .icono__elemento{
+            img{
+                margin: 0 auto;
+                width: 12rem;
+            }
+            .iconos__descripcion{
+                font-family: v.$fuenteCursiva;
+                font-size: 3.2rem;
+                color: v.$primario;
+            }
+        }
+    }
+}
