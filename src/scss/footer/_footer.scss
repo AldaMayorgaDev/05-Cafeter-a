@@ -1,0 +1,44 @@
+/* Footer */
+
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer{
+    background-color: v.$primario;
+
+    .footer__contenido{
+        padding: 5rem;
+        border-radius: 0 0 .6rem .6rem;
+
+        @include m.tablet{ 
+            @include m.grid(3, 2rem);
+        }
+    }
+}
+
+.footer__box{
+    font-family: v.$fuenteCursiva;
+    text-align: center;
+    margin-bottom: v.$separacion;
+    @include m.tablet{ 
+        margin-bottom: 0;
+    }
+    h3{
+        font-family: v.$fuenteCursiva;
+        margin: 0 0 1rem 0;
+        font-size: 2.4rem;
+        color: v.$secundario;
+    }
+    p,a{
+        font-size: 2rem;
+        margin: 0;
+    }
+}
+
+.footer__copyright{
+    color: v.$cafeClaro;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    padding: 2rem;
+    line-height: 1.2;
+}
