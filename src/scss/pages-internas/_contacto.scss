@@ -1,0 +1,57 @@
+/* Contacto */
+
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.contacto__contenido{
+
+    @include m.tablet{ 
+        @include m.grid(2, v.$separacion);
+        background-image: url(../img/granos_cafe.jpg);
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: 40%;
+    }
+
+}
+
+.contacto__formulario{
+    .formulario__campo{
+        margin-bottom: 2rem;
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        label{
+            text-transform: uppercase;
+            display: block;
+            font-size:2.2rem;
+            font-weight: 700;
+        }
+        input:not([type="submit"]), select{
+            width: 100%;
+            padding: 1rem;
+            border: .5rem solid v.$primario;
+        }
+        input[type="submit"]{
+            background-color: v.$primario;
+            width: 100%;
+            border: none;
+            padding: 1rem;
+            color: v.$blanco;
+            text-transform: uppercase;
+            font-size:2.2rem;
+            font-weight: 700;
+            transition: all 0.30s ease-out;
+
+
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.01);
+                border-radius: .4rem;
+                font-size:2.25rem;
+                box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 1.0);
+            }
+        }
+    }       
+}

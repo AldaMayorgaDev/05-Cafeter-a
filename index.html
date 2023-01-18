@@ -4,11 +4,218 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./build/css/app.css">
     <title>Cafetería SASS</title>
 </head>
 <body>
-    
+    <header class="header inicio__header">
+        <div class="header__contenido inicio__contenedor">
+            <div class="inicio__barra">
+                <div class="inicio__logo">
+                    <img src="./build/img/logo.svg" alt="logo cafeteria " title="Logo cafeteria">
+                </div>
+                <nav class="inicio__nav">
+                    <a href="index.html" class="activo">Inicio</a>
+                    <a href="./pages/nosotros.html">Nosotros</a>
+                    <a href="./pages/proceso.html">Proceso</a>
+                    <a href="./pages/menu.html">Menú</a>
+                    <a href="./pages/galeria.html">Galería</a>
+                    <a href="./pages/contacto.html">Contacto</a>
+                </nav>
+            </div>
+            <div class="header__texto">
+                <h1 class="header__heading">Disfruta una deliciosa taza de café</h1>
+            </div>
+        </div>
+    </header> <!-- Fin Header -->
+
+    <main class="principal__contenido text-center principal__contenedor">
+        <section class="principal__conoce">
+            <h2 class="principal__heading">
+                <span class="principal__span">Conoce más</span> sobre nosotros
+            </h2>
+            <p class="principal__parrafo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nostrum, cupiditate iste, aspernatur aliquid in praesentium dolor molestiae modi beatae sed laboriosam corporis officia cum neque porro quibusdam consectetur delectus.
+                Enim voluptas, debitis quis, vitae quos explicabo asperiores repellat, repudiandae autem iusto cupiditate sequi excepturi beatae magni ut corrupti aperiam! Modi nihil, inventore aperiam ipsum repellat sapiente iste magni similique!.
+            </p>
+        </section>
+        <section class="principal__iconos">
+            <ul class="iconos__listado">
+                <li class="icono__elemento">
+                    <img src="./build/img/icono_cafe.svg" alt="icono café" title="icono café">
+                    <p class="iconos__descripcion">
+                        Café
+                    </p>
+                </li>
+
+                <li class="icono__elemento">
+                    <img src="./build/img/icono_postre.svg" alt="icono postre" title="icono postre">
+                    <p class="iconos__descripcion">
+                        Postres
+                    </p>
+                </li>
+
+                <li class="icono__elemento">
+                    <img src="./build/img/icono_te.svg" alt="icono té" title="icono té">
+                    <p class="iconos__descripcion">
+                        Té
+                    </p>
+                </li>
+            </ul>
+        </section>
+    </main><!-- Fin main -->
+    <section class="experiencia principal__contenido experiencia__contenedor">
+        <h2 class="experiencia__heading">
+            <span class="experiencia__span">Vive la</span> experiencia
+        </h2>
+        <div class="galeria">
+            <div class="galeria__imagen">
+                <img src="./build/img/galeria/galeria_01.jpg" alt="Imagen Galeria 01" title="Fotografia de nuestra galeria 01">
+            </div>
+            <div class="galeria__imagen">
+                <img src="./build/img/galeria/galeria_02.jpg" alt="Imagen Galeria 02" title="Fotografia de nuestra galeria 02">
+            </div>
+            <div class="galeria__imagen">
+                <img src="./build/img/galeria/galeria_03.jpg" alt="Imagen Galeria 03" title="Fotografia de nuestra galeria 03">
+            </div>
+            <div class="galeria__imagen">
+                <img src="./build/img/galeria/galeria_04.jpg" alt="Imagen Galeria 04" title="Fotografia de nuestra galeria 04">
+            </div>
+            <div class="galeria__imagen">
+                <img src="./build/img/galeria/galeria_05.jpg" alt="Imagen Galeria 05" title="Fotografia de nuestra galeria 05">
+            </div>
+            <div class="galeria__imagen">
+                <img src="./build/img/galeria/galeria_06.jpg" alt="Imagen Galeria 06" title="Fotografia de nuestra galeria 06">
+            </div>
+            <div class="galeria__imagen">
+                <img src="./build/img/galeria/galeria_07.jpg" alt="Imagen Galeria 07" title="Fotografia de nuestra galeria 07">
+            </div>
+            <div class="galeria__imagen">
+                <img src="./build/img/galeria/galeria_08.jpg" alt="Imagen Galeria 08" title="Fotografia de nuestra galeria 08">
+            </div>
+            <div class="galeria__imagen">
+                <img src="./build/img/galeria/galeria_09.jpg" alt="Imagen Galeria 09" title="Fotografia de nuestra galeria 09">
+            </div>
+            <div class="galeria__imagen">
+                <img src="./build/img/galeria/galeria_10.jpg" alt="Imagen Galeria 10" title="Fotografia de nuestra galeria 10">
+            </div>
+
+        </div> <!-- Fin Galeria -->
+    </section> <!-- Fin Experiencia -->
+
+    <section class="nuestro-menu">
+        <h2 class="heading-blanco">
+            <span class="menu__span">Nuestro delicioso</span> Menú
+        </h2>
+        <div class="menu__grid menu__contenedor">
+            <section class="menu cafe">
+                <h3 class="menu__titulo">
+                    Café
+                </h3>
+                <ul>
+                    <li>
+                        <p>Café Latte <span>Café Espresso con leche caliente evaporada</span> </p>
+                        <p class="precio">$25</p>
+                    </li>
+                    <li>
+                        <p>Café Mocha <span>Espresso con crema batida</span> </p>
+                        <p class="precio">$30</p>
+                    </li>
+                    <li>
+                        <p>Café Americano <span>Café Negro</span> </p>
+                        <p class="precio">$30</p>
+                    </li>
+                    <li>
+                        <p>Capuccino<span>Espresso con una capa suave de espuma</span> </p>
+                        <p class="precio">$25</p>
+                    </li>
+                    <li>
+                        <p>Café Mocha Frio<span>Espresso, dulce con mocha y leche.</span> </p>
+                        <p class="precio">$29</p>
+                    </li>
+                    <li>
+                        <p>Mocha Frio Quemado<span>Espresso, hielo, con azucar quemada y mantequilla.</span> </p>
+                        <p class="precio">$35</p>
+                    </li>
+                    <li>
+                        <p>Latte con Caramelo<span>Espresso, leche y caramelo.</span> </p>
+                        <p class="precio">$39</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="menu comida">
+                <h3 class="menu__titulo">
+                    Comida
+                </h3>
+                <ul>
+                    <li>
+                        <p>Baguette de Pollo <span>Delicioso Baguette con pollo a la plancha</span> </p>
+                        <p class="precio">$45</p>
+                    </li>
+                    <li>
+                        <p>Baguette Pollo y Queso <span>Baguette combinado con Pollo y Queso Manchego</span> </p>
+                        <p class="precio">$50</p>
+                    </li>
+                    <li>
+                        <p>Baguette con Tocino<span>Baguette con especias y verduras, además de tocino</span> </p>
+                        <p class="precio">$50</p>
+                    </li>
+                    <li>
+                        <p>Baguette de Jamón<span>Delicioso Baguette con Jamón y Especias</span> </p>
+                        <p class="precio">$65</p>
+                    </li>
+                    <li>
+                        <p>Baguette con Jamón, Queso y Tocino<span>El especial de la casa</span> </p>
+                        <p class="precio">$69</p>
+                    </li>
+                    <li>
+                        <p>Sandwich de Pollo<span>Delicioso sandwich con Pollo y especies</span> </p>
+                        <p class="precio">$65</p>
+                    </li>
+                    <li>
+                        <p>Sandwich de Jamón y queso<span>Queso Amarillo con Jamón y Queso</span> </p>
+                        <p class="precio">$59</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </section> <!-- Fin menú -->
+
+    <section class="nuestros-testimoniales margin-negativo-5 bg-white testimoniales__contenedor">
+        <h2 class="testimoniales__heading">
+            <span class="testimoniales__span">Lo que dicen nuestros</span> clientes
+        </h2>
+        <div class="testimonial">
+            <p class="testimonial__parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolores doloremque pariatur a, veritatis voluptates, ducimus odit consectetur eos id praesentium rerum ipsam! Unde modi accusantium iste distinctio beatae eum.
+            </p>
+            <p class="testimonial__autor">
+                Aldahir Mayorga Garcia
+            </p>
+        </div>
+    </section><!-- Fin testimoniales -->
+    <footer class="footer">
+        <div class="footer__contenido bg-white footer__contenedor">
+            <div class="footer__box ubicacion">
+                <h3>Ubicación</h3>
+                <p>Nicolas Copérnico 5990-A</p>
+                <p>Guadalajara, Jalisco, Mex.</p>
+            </div>
+            <div class="footer__box reservacion">
+                <h3>Reservación</h3>
+                <p>Tel. 38560-9102</p>
+                <a href="tel:+5238560-9102">Llamar</a>
+            </div>
+            <div class="footer__box horario">
+                <h3>Horario</h3>
+                <p>Lun-Jue: 11:00 - 22:00</p>
+                <p>Vie-Sáb: 09:00 - 23:00</p>
+                <p>Domingo: Cerrado </p>
+            </div>
+        </div>
+        <p class="footer__copyright text-center">Todos los derechos reservados &copy; La cafetería® 2023.</p>
+    </footer> <!-- Fin footer -->
 </body>
 </html>

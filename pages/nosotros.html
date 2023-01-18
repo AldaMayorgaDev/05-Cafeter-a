@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../build/css/app.css">
+    <title>Cafetería SASS</title>
+</head>
+<body>
+    <header class="header nosotros__header">
+        <div class="header__contenido nosotros__contenedor">
+            <div class="inicio__barra">
+                <div class="inicio__logo">
+                    <img src="../build/img/logo.svg" alt="logo cafeteria " title="Logo cafeteria">
+                </div>
+                <nav class="inicio__nav">
+                    <a href="../index.html" >Inicio</a>
+                    <a href="./nosotros.html" class="activo">Nosotros</a>
+                    <a href="./proceso.html">Proceso</a>
+                    <a href="./menu.html">Menú</a>
+                    <a href="./galeria.html">Galería</a>
+                    <a href="./contacto.html">Contacto</a>
+                </nav>
+            </div>
+            <div class="header__texto">
+                <h1 class="header__heading">Una nueva experiencia cada día</h1>
+            </div>
+        </div>
+    </header> <!-- Fin Header -->
+
+    <main class="principal__contenido principal__contenedor">
+       <h2><span>Conoce más</span> sobre nosotros</h2>
+       <div class="nosotros__contenido">
+            <div class="nosotros__imagen">
+                <picture>
+                    <source
+                        
+                        srcset="../build/img/nosotros_sidebar.avif"
+                        type="image/avif">
+                    <source
+                        
+                        srcset="../build/img/nosotros_sidebar.webp"
+                        type="image/webp">
+                    <source
+                        
+                        srcset="../build/img/nosotros_sidebar.jpg" 
+                        type="image/jpeg">
+                    <img loading="lazy" decoding="async" src="../build/img/nosotros_sidebar.jpg" lazyalt="imagen" width="500" height="300" alt="Nosotros" title="Nosotros" >
+                </picture>
+            </div>
+            <div class="nosotros__texto">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat blanditiis beatae quia in voluptates voluptatem? Voluptatum, id pariatur saepe quaerat quasi, eaque tenetur officiis, maxime quas harum rem facere ullam.
+                Consequatur quod fuga nesciunt perspiciatis dicta iure eum iste libero doloribus nam dolores sed, eveniet facere cum ratione rerum error illum itaque suscipit magnam laborum dolorum. Adipisci consequatur eum non!</p>
+                
+                <blockquote>¡Excelente Sabor!</blockquote>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat blanditiis beatae quia in voluptates voluptatem? Voluptatum, id pariatur saepe quaerat quasi, eaque tenetur officiis, maxime quas harum rem facere ullam.
+                    Consequatur quod fuga nesciunt perspiciatis dicta iure eum iste libero doloribus nam dolores sed, eveniet facere cum ratione rerum error illum itaque suscipit magnam laborum dolorum. Adipisci consequatur eum non!</p>
+            </div>
+       </div>
+    </main><!-- Fin main -->
+
+
+    <footer class="footer">
+        <div class="footer__contenido bg-white footer__contenedor">
+            <div class="footer__box ubicacion">
+                <h3>Ubicación</h3>
+                <p>Nicolas Copérnico 5990-A</p>
+                <p>Guadalajara, Jalisco, Mex.</p>
+            </div>
+            <div class="footer__box reservacion">
+                <h3>Reservación</h3>
+                <p>Tel. 38560-9102</p>
+                <a href="tel:+5238560-9102">Llamar</a>
+            </div>
+            <div class="footer__box horario">
+                <h3>Horario</h3>
+                <p>Lun-Jue: 11:00 - 22:00</p>
+                <p>Vie-Sáb: 09:00 - 23:00</p>
+                <p>Domingo: Cerrado </p>
+            </div>
+        </div>
+        <p class="footer__copyright text-center">Todos los derechos reservados &copy; La cafetería® 2023.</p>
+    </footer> <!-- Fin footer -->
+</body>
+</html>

@@ -2,7 +2,9 @@
 
 // Fuentes
 
-$fuente_Principal: 'Roboto', sans-serif;
+$fuentePrincipal:  'Raleway', sans-serif;
+$fuenteSecundaria: 'Roboto', sans-serif;
+$fuenteCursiva: 'Bona Nova', serif;
 
 // Media Queries
 
@@ -12,11 +14,12 @@ $desktop: 1024px;
 
 // Paleta de Colores
 
-$primario: #e8505b;
-$secundario: #455a64;
+$primario: #5e311e;
+$secundario: #c39c63;
 $negro: #000000;
 $blanco: #ffffff;
 $grisClaro: #eceeef;
+$cafeClaro: #ebe7de;
 
 // Unidades
 
