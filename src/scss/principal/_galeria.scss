@@ -14,7 +14,15 @@
             height: 30rem;
             width: 30rem;
             object-fit: cover;
+            transition: all 0.30s ease-out;
+
+            &:hover{
+                transform: scale(1.04);
+                border-radius: 1.2rem;
+                cursor: pointer;
+            }
         }
+        
 
         @include m.desktop{ 
             &:nth-child(1){

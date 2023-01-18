@@ -471,6 +471,10 @@ h3 {
   background-image: url(../img/header_menu.jpg);
 }
 
+.galeria__header {
+  background-image: url(../img/header_galeria.jpg);
+}
+
 /**** Navegacion ****/
 .inicio__nav {
   display: flex;
@@ -583,6 +587,13 @@ h3 {
   width: 30rem;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 0.3s ease-out;
+}
+.galeria .galeria__imagen img:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+  border-radius: 1.2rem;
+  cursor: pointer;
 }
 @media (min-width: 1024px) {
   .galeria .galeria__imagen:nth-child(1) {
