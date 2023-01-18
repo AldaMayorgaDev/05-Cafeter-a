@@ -402,8 +402,16 @@ h3 {
   text-align: center;
 }
 
-bg-primario {
+.bg-primario {
   background-color: #5e311e;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.margin-negativo-5 {
+  margin-top: -5rem;
 }
 
 /* Header */
@@ -709,4 +717,35 @@ bg-primario {
 .menu li .precio {
   font-size: 4rem;
   font-weight: 700;
+}
+
+/* Testimoniales */
+.nuestros-testimoniales {
+  padding: 10rem 2rem;
+  border-radius: 0.6rem;
+}
+@media (min-width: 768px) {
+  .nuestros-testimoniales {
+    padding: 10rem;
+  }
+}
+.nuestros-testimoniales .testimonial {
+  background-color: #ebe7de;
+  padding: 2rem 4rem;
+  max-width: 50rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+.nuestros-testimoniales .testimonial .testimonial__autor {
+  text-align: right;
+  font-size: 2rem;
+  color: #5e311e;
+  font-family: "Bona Nova", serif;
+  line-height: 1.2;
+}
+.nuestros-testimoniales .testimonial .testimonial__autor::before {
+  content: "-";
+}
+.nuestros-testimoniales .testimonial .testimonial__autor::after {
+  content: ".";
 }
