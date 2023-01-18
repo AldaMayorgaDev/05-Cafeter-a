@@ -36,11 +36,12 @@ _Las técnologias utilizadas para el desarrollo fueron:_
 
 ## Vista previa del proyecto 👀 
 
-* 👀  [Proyecto]()
+* 👀  [Proyecto]( https://aldamayorgadev.github.io/05-Cafeteria/)
 
 
 ## Reporte de Lighthouse 💡 
 
+<img width="804" alt="Captura de Pantalla 2023-01-18 a la(s) 17 05 55" src="https://user-images.githubusercontent.com/94152243/213314681-c837e869-d1f1-4622-9f62-13aca8e3e99e.png">
 
 
 
