@@ -29,6 +29,7 @@ const {src, dest, watch, series, parallel} = require ('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
 
 function css(done){
     //Compilar sass
@@ -39,8 +40,10 @@ function css(done){
   
     src('./src/scss/app.scss') //Buscar el archivo
        /*  .pipe(sass({ outputStyle: 'compressed'})) //Ya que encontro el archivo lo compila y lo devuelve en un formato minificado. */
+       .pipe(sourcemaps.init()) // Inicia source map, siempre debe ir antes de compilar
         .pipe(sass({ outputStyle: 'expanded'})) //Ya que encontro el archivo lo compila y lo devuelve en un formato expandido .
         .pipe(postcss([ autoprefixer() ]) )
+        .pipe(sourcemaps.write('.')) //Indicamos en donde queremos escribir el sourcemaps
         .pipe(dest('build/css')) //Ya una vez compilado Guarda el archivo .css
     done();
 }
@@ -64,7 +67,7 @@ function imagenes(done){
     done();   
 }
 
-/* Tarea para converitir imagenes a .webp*/
+/* Tarea para convertir imagenes a .webp*/
 const webp = require('gulp-webp');
 function toWebp(){
     const opciones= {
@@ -76,7 +79,7 @@ function toWebp(){
 
 }
 
-/* Tarea para converiri imagenes a .avif */
+/* Tarea para convertir imagenes a .avif */
 const avif = require('gulp-avif');
 function toAvif(){
     const opciones= {
@@ -86,6 +89,13 @@ function toAvif(){
     .pipe(avif(opciones))
     .pipe(dest('build/img'));
 }
+
+
+
+
+
+
+
 
 exports.css = css;
 exports.dev = dev;
