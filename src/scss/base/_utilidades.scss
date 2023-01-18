@@ -4,6 +4,14 @@
     text-align: center;
 }
 
-bg-primario{
+.bg-primario{
     background-color: v.$primario;
+}
+
+.bg-white{
+    background-color: v.$blanco;
+}
+
+.margin-negativo-5{
+    margin-top: -5rem;
 }
