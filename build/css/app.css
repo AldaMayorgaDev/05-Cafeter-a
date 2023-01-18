@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -343,6 +344,7 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -398,27 +400,12 @@ h3 {
   font-size: 3.2rem;
 }
 
-/* Utilidades */
-.text-center {
-  text-align: center;
-}
-
-.bg-primario {
-  background-color: #5e311e;
-}
-
-.bg-white {
-  background-color: #ffffff;
-}
-
-.margin-negativo-5 {
-  margin-top: -5rem;
-}
-
 /* Header */
 .header {
   padding: 5rem 0;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media (min-width: 768px) {
   .header {
@@ -470,6 +457,26 @@ h3 {
 
 .inicio__header {
   background-image: url(../img/header_inicio.jpg);
+}
+
+.nosotros__header {
+  background-image: url(../img/header_nosotros.jpg);
+}
+
+.proceso__header {
+  background-image: url(../img/header_proceso.jpg);
+}
+
+.menu__header {
+  background-image: url(../img/header_menu.jpg);
+}
+
+.galeria__header {
+  background-image: url(../img/header_galeria.jpg);
+}
+
+.contacto__header {
+  background-image: url(../img/header_contacto.jpg);
 }
 
 /**** Navegacion ****/
@@ -584,6 +591,13 @@ h3 {
   width: 30rem;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 0.3s ease-out;
+}
+.galeria .galeria__imagen img:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+  border-radius: 1.2rem;
+  cursor: pointer;
 }
 @media (min-width: 1024px) {
   .galeria .galeria__imagen:nth-child(1) {
@@ -794,4 +808,195 @@ h3 {
   margin-bottom: 0;
   padding: 2rem;
   line-height: 1.2;
+}
+
+/* Nosotros */
+@media (min-width: 768px) {
+  .nosotros__contenido {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+.nosotros__contenido .nosotros__imagen {
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .nosotros__contenido .nosotros__imagen {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+}
+.nosotros__contenido .nosotros__imagen img {
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+  border: 3rem solid #ffffff;
+  box-shadow: 9px 10px 5px -7px rgba(0, 0, 0, 0.35);
+}
+.nosotros__contenido .nosotros__texto p:first-of-type {
+  text-align: right;
+}
+.nosotros__contenido .nosotros__texto p:last-of-type {
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .nosotros__contenido .nosotros__texto p:first-of-type {
+    text-align: justify;
+  }
+  .nosotros__contenido .nosotros__texto p:last-of-type {
+    text-align: justify;
+  }
+}
+.nosotros__contenido .nosotros__texto blockquote {
+  margin: 0;
+  padding: 1rem;
+  border-left: 0.5rem solid #5e311e;
+  font-size: 2rem;
+}
+
+/*Proceso */
+.proceso__cafe {
+  margin-bottom: 5rem;
+  /*
+      Orden de las imagenes
+      Se utiliza order solo cuando hay un display: flex en el padre;
+      &:nth-child(2), &:nth-child(4) --> para hacerlo escalabre se ocupa even (todos los numeros pares); si fueran elementos impares se utiliza (odd)
+   */
+}
+.proceso__cafe:last-of-type {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .proceso__cafe {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+  }
+}
+.proceso__cafe:nth-child(even) .proceso__imagen {
+  order: 2;
+}
+.proceso__cafe:nth-child(even) .proceso__texto {
+  order: 1;
+}
+.proceso__cafe .proceso__imagen,
+.proceso__cafe .proceso__texto {
+  flex: 1;
+}
+.proceso__cafe .proceso__texto {
+  margin-top: 1rem;
+}
+.proceso__cafe .proceso__texto h3 {
+  margin: 0;
+  text-align: left;
+  color: #5e311e;
+}
+.proceso__cafe .proceso__texto h3::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 5px;
+  background-color: #c39c63;
+}
+.proceso__cafe .proceso__imagen img {
+  border-radius: 2rem;
+}
+
+/* Page Menú */
+.menu__contenido {
+  background-image: url(../img/cafe.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  aspect-ratio: 3/6;
+}
+@media (min-width: 480px) {
+  .menu__contenido {
+    aspect-ratio: 3/4;
+  }
+}
+@media (min-width: 768px) {
+  .menu__contenido {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    aspect-ratio: 16/6;
+    background-size: 40%;
+    background-position: bottom right;
+  }
+}
+.menu__contenido .menu__texto {
+  text-align: justify;
+  font-size: 2rem;
+}
+
+/* Contacto */
+@media (min-width: 768px) {
+  .contacto__contenido {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    background-image: url(../img/granos_cafe.jpg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+  }
+}
+
+.contacto__formulario .formulario__campo {
+  margin-bottom: 2rem;
+}
+.contacto__formulario .formulario__campo:last-child {
+  margin-bottom: 0;
+}
+.contacto__formulario .formulario__campo label {
+  text-transform: uppercase;
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.contacto__formulario .formulario__campo input:not([type=submit]), .contacto__formulario .formulario__campo select {
+  width: 100%;
+  padding: 1rem;
+  border: 0.5rem solid #5e311e;
+}
+.contacto__formulario .formulario__campo input[type=submit] {
+  background-color: #5e311e;
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 700;
+  transition: all 0.3s ease-out;
+}
+.contacto__formulario .formulario__campo input[type=submit]:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  border-radius: 0.4rem;
+  font-size: 2.25rem;
+  box-shadow: 2px 2px 5px black;
+}
+
+/* Utilidades */
+.text-center {
+  text-align: center;
+}
+
+.bg-primario {
+  background-color: #5e311e;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.margin-negativo-5 {
+  margin-top: -5rem;
+}
+
+.padding-bottom-0 {
+  padding-bottom: 0;
 }
