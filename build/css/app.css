@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -399,23 +400,6 @@ h3 {
   font-size: 3.2rem;
 }
 
-/* Utilidades */
-.text-center {
-  text-align: center;
-}
-
-.bg-primario {
-  background-color: #5e311e;
-}
-
-.bg-white {
-  background-color: #ffffff;
-}
-
-.margin-negativo-5 {
-  margin-top: -5rem;
-}
-
 /* Header */
 .header {
   padding: 5rem 0;
@@ -481,6 +465,10 @@ h3 {
 
 .proceso__header {
   background-image: url(../img/header_proceso.jpg);
+}
+
+.menu__header {
+  background-image: url(../img/header_menu.jpg);
 }
 
 /**** Navegacion ****/
@@ -897,4 +885,53 @@ h3 {
 }
 .proceso__cafe .proceso__imagen img {
   border-radius: 2rem;
+}
+
+/* Page Menú */
+.menu__contenido {
+  background-image: url(../img/cafe.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  aspect-ratio: 3/6;
+}
+@media (min-width: 480px) {
+  .menu__contenido {
+    aspect-ratio: 3/4;
+  }
+}
+@media (min-width: 768px) {
+  .menu__contenido {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    aspect-ratio: 16/6;
+    background-size: 40%;
+    background-position: bottom right;
+  }
+}
+.menu__contenido .menu__texto {
+  text-align: justify;
+  font-size: 2rem;
+}
+
+/* Utilidades */
+.text-center {
+  text-align: center;
+}
+
+.bg-primario {
+  background-color: #5e311e;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.margin-negativo-5 {
+  margin-top: -5rem;
+}
+
+.padding-bottom-0 {
+  padding-bottom: 0;
 }
