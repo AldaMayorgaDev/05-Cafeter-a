@@ -343,6 +343,7 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -419,6 +420,8 @@ h3 {
 .header {
   padding: 5rem 0;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media (min-width: 768px) {
   .header {
@@ -470,6 +473,10 @@ h3 {
 
 .inicio__header {
   background-image: url(../img/header_inicio.jpg);
+}
+
+.nosotros__header {
+  background-image: url(../img/header_nosotros.jpg);
 }
 
 /**** Navegacion ****/
@@ -794,4 +801,48 @@ h3 {
   margin-bottom: 0;
   padding: 2rem;
   line-height: 1.2;
+}
+
+/* Nosotros */
+@media (min-width: 768px) {
+  .nosotros__contenido {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+.nosotros__contenido .nosotros__imagen {
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .nosotros__contenido .nosotros__imagen {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+}
+.nosotros__contenido .nosotros__imagen img {
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+  border: 3rem solid #ffffff;
+  box-shadow: 9px 10px 5px -7px rgba(0, 0, 0, 0.35);
+}
+.nosotros__contenido .nosotros__texto p:first-of-type {
+  text-align: right;
+}
+.nosotros__contenido .nosotros__texto p:last-of-type {
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .nosotros__contenido .nosotros__texto p:first-of-type {
+    text-align: justify;
+  }
+  .nosotros__contenido .nosotros__texto p:last-of-type {
+    text-align: justify;
+  }
+}
+.nosotros__contenido .nosotros__texto blockquote {
+  margin: 0;
+  padding: 1rem;
+  border-left: 0.5rem solid #5e311e;
+  font-size: 2rem;
 }
