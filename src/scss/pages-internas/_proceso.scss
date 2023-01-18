@@ -1,0 +1,57 @@
+/*Proceso */
+
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.proceso__cafe{
+    margin-bottom: 5rem;
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+    @include m.tablet{ 
+        display: flex;
+        gap: v.$separacion;
+        align-items: center;
+    }
+
+/*
+    Orden de las imagenes
+    Se utiliza order solo cuando hay un display: flex en el padre;
+    &:nth-child(2), &:nth-child(4) --> para hacerlo escalabre se ocupa even (todos los numeros pares); si fueran elementos impares se utiliza (odd)
+ */
+    &:nth-child(even){
+        .proceso__imagen{
+            order: 2;
+        }
+        .proceso__texto{
+            order: 1;
+        }
+    }
+
+    .proceso__imagen,
+    .proceso__texto{
+        flex: 1;
+    }
+
+    .proceso__texto{
+        margin-top: 1rem;
+        h3{
+            margin: 0;
+            text-align: left;
+            color: v.$primario;
+
+            &::after{
+                content: '';
+                display: block;
+                width: 50%;
+                height: 5px;
+                background-color: v.$secundario;
+            }
+        }
+    }
+    .proceso__imagen{
+        img{
+            border-radius: 2rem;
+        }
+    }
+}

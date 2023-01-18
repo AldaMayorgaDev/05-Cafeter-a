@@ -479,6 +479,10 @@ h3 {
   background-image: url(../img/header_nosotros.jpg);
 }
 
+.proceso__header {
+  background-image: url(../img/header_proceso.jpg);
+}
+
 /**** Navegacion ****/
 .inicio__nav {
   display: flex;
@@ -845,4 +849,52 @@ h3 {
   padding: 1rem;
   border-left: 0.5rem solid #5e311e;
   font-size: 2rem;
+}
+
+/*Proceso */
+.proceso__cafe {
+  margin-bottom: 5rem;
+  /*
+      Orden de las imagenes
+      Se utiliza order solo cuando hay un display: flex en el padre;
+      &:nth-child(2), &:nth-child(4) --> para hacerlo escalabre se ocupa even (todos los numeros pares); si fueran elementos impares se utiliza (odd)
+   */
+}
+.proceso__cafe:last-of-type {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .proceso__cafe {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+  }
+}
+.proceso__cafe:nth-child(even) .proceso__imagen {
+  order: 2;
+}
+.proceso__cafe:nth-child(even) .proceso__texto {
+  order: 1;
+}
+.proceso__cafe .proceso__imagen,
+.proceso__cafe .proceso__texto {
+  flex: 1;
+}
+.proceso__cafe .proceso__texto {
+  margin-top: 1rem;
+}
+.proceso__cafe .proceso__texto h3 {
+  margin: 0;
+  text-align: left;
+  color: #5e311e;
+}
+.proceso__cafe .proceso__texto h3::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 5px;
+  background-color: #c39c63;
+}
+.proceso__cafe .proceso__imagen img {
+  border-radius: 2rem;
 }
