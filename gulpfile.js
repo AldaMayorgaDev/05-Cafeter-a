@@ -30,6 +30,7 @@ const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
+const cssnano = require('cssnano');
 
 function css(done){
     //Compilar sass
@@ -42,7 +43,7 @@ function css(done){
        /*  .pipe(sass({ outputStyle: 'compressed'})) //Ya que encontro el archivo lo compila y lo devuelve en un formato minificado. */
        .pipe(sourcemaps.init()) // Inicia source map, siempre debe ir antes de compilar
         .pipe(sass({ outputStyle: 'expanded'})) //Ya que encontro el archivo lo compila y lo devuelve en un formato expandido .
-        .pipe(postcss([ autoprefixer() ]) )
+        .pipe(postcss([ autoprefixer(), cssnano() ]) )
         .pipe(sourcemaps.write('.')) //Indicamos en donde queremos escribir el sourcemaps
         .pipe(dest('build/css')) //Ya una vez compilado Guarda el archivo .css
     done();

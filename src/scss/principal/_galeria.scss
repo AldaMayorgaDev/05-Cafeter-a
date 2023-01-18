@@ -23,7 +23,6 @@
             }
         }
         
-
         @include m.desktop{ 
             &:nth-child(1){
                 grid-row: 1/3;
